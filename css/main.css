@@ -205,6 +205,9 @@ input[id="mode"]:checked ~ .container {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
 }
 .quit__box {
   width: 100%;
@@ -216,9 +219,6 @@ input[id="mode"]:checked ~ .container {
   justify-content: center;
   background-color: #1f3641;
   box-shadow: 0px 0px 20px 5px #f2f2f2;
-}
-.quit {
-  display: none;
 }
 .quit-text-style {
   font-weight: 700;
@@ -261,12 +261,14 @@ input[id="mode"]:checked ~ .container {
   background-color: #f2b137;
   box-shadow: inset 0px -4px 0px 0px #cc8b13;
 }
-
+.quit {
+  display: none;
+}
 input[id="input-btn"] {
   display: none;
 }
 
-input[id="input-btn"]:checked + div > header > label:active {
+input[id="input-btn"]:checked + div > header > label {
   display: block;
 }
 input[id="input-btn"]:checked + .quit {
@@ -279,10 +281,9 @@ input[id="next"] {
 .btn-2 {
   cursor: pointer;
 }
-input[id="next"]:checked + .quit > .quit__box > .quit__three > label:active {
+input[id="next"]:checked + .quit > .quit__box > .quit__three > label {
   display: flex;
 }
-
 input[id="next"]:checked ~ .quit {
   display: none;
 }
